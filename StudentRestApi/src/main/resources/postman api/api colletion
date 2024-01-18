@@ -1,0 +1,37 @@
+ 1. signup
+ ============  
+ Method: post
+ 
+Api:  http://localhost:8080/api/auth/signup
+
+Request:
+{
+"username":"viraj",
+"email":"viraj@mailinator.com",
+"password":"12345678",
+"role":["user","mod"]
+}
+
+2. SignIn
+
+Method: post
+
+Api:http://localhost:8080/api/auth/signin
+
+
+Request:{
+    "username":"viraj",
+    "password":"12345678"
+}
+
+3. Signout
+
+Method:Post
+
+Api:http://localhost:8080/api/auth/signout
+
+4. test api
+
+method:Get
+
+Api:http://localhost:8080/api/test/user
