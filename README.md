@@ -10,4 +10,6 @@ Spring Boot Security Login example with JWT and MySQL example
 
 Crud operation,User Registration, Login and Authorization process.
 
+With Dockerfile,postman collection ,MySQL Queries
+
 
