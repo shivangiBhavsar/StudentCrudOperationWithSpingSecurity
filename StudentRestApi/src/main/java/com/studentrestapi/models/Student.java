@@ -1,6 +1,7 @@
 package com.studentrestapi.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.studentrestapi.CustomAnnotation.ValidateStandardOfStudent;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -46,7 +47,9 @@ public class Student {
 	@Column
 	private String gender;
 	
-	@NotBlank(message = "Standard is mandatory")
+	//custom annotation
+	//@NotBlank(message = "Standard is mandatory")
+	@ValidateStandardOfStudent
 	@Column
 	private Integer standard;
 	
@@ -61,10 +64,10 @@ public class Student {
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "doc_id", referencedColumnName = "id")
-	public Document document;
+	private Document document;
 	
 	@Column(name = "uId", unique = false)
-	public Long uId;
+	private Long uId;
 	
 
 	public Document getDocument() {
